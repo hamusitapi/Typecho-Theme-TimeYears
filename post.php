@@ -4,11 +4,11 @@ $this->need('header.php');
  ?>
 
 <!-- post main -->
-<div class="mdui-center">
-  <div class="mdui-m-a-1 mdui-p-a-1 mdui-hoverable">
+<div class="mdui-center mdui-shadow-8" >
+  <div class="mdui-m-a-1 mdui-p-a-1">
     <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
   </div>
-  <div class="mdui-m-a-1 mdui-p-a-1 mdui-hoverable">
+  <div class="mdui-m-a-1 mdui-p-a-1">
     <?php $this -> content(); ?>
   </div>
 </div>
