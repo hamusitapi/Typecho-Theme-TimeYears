@@ -32,10 +32,10 @@
 	<div class="mdui-p-a-2">
 		<form method="post" action="">
 			<div class="mdui-row">
-				<div class="mdui-col-xs-3">
+				<div class="mdui-col-xs-8">
 					<input type="text" class="mdui-textfield-input mdui-ripple" placeholder="找点什么？" name="s" class="text" size="32" /> 
 				</div>
-				<div class="mdui-col-xs-3">
+				<div class="mdui-col-xs-2">
 					<input type="submit" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" class="submit" value="Search" />
 				</div>
 			</div>
