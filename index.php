@@ -9,7 +9,7 @@
  */
 ?>
 <?php $this->need('header.php');//引入页头?>
-<section class="mdui-center mdui-hoverable mdui-shadow-8 " >
+<section class="mdui-center mdui-hoverable mdui-shadow-8 ">
 	
 	<!-- 文章输出 -->
 	<?php $index=0;  ?>
