@@ -12,14 +12,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');//引入<head>
  ?>
 
-//站点名称和描述
+<!-- 站点名称和描述 -->
 <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
 <span><?php $this->options->description() ?></span>
-//站内搜索
+<!-- 站内搜索 -->
 <form method="post" action="">
     <div><input type="text" name="s" class="text" size="32" /> <input type="submit" class="submit" value="Search" /></div>
 </form>
-//显示文章
+<!-- 显示文章 -->
 <?php while($this->next()): ?>
     <div class="post">
 	<h2 class="entry_title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
@@ -32,4 +32,5 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	</div>
     </div>
 <?php endwhile; ?>
-<?php $this->pageNav(); ?>//文章分页
+<!-- 文章分页 -->
+<?php $this->pageNav(); ?>
