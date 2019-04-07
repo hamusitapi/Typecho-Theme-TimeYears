@@ -1,6 +1,6 @@
 # Typecho-Theme-TimeYears  
 目前累计爆肝了<7>小时
-主题演示站点：http://timeyears.cn/
+主题演示站点：https://www.timeyears.cn/
 
 - 时岁主题-简洁MD风  
 - 采用MDUI，12式响应式布局  
