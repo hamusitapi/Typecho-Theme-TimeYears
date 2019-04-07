@@ -9,9 +9,13 @@
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
- $this->need('header.php');//引入<head>
- ?>
-
+$this->need('header.php');//引入<head>
+?>
+<!-- 引用资源 -->
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.css'); ?>" /> -->
+</head>
 <!-- 站点名称和描述 -->
 <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
 <span><?php $this->options->description() ?></span>
