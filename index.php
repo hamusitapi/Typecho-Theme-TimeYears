@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @link http://timeyears.cn
  */
-<?php while($this->next()): ?>
+<?php while($this->next()): ?>//循环输出文章
     <div class="post">
 	<h2 class="entry_title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
 	<div class="entry_data">
