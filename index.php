@@ -1,7 +1,7 @@
 /**
  * 小哈的第一个typecho主题
- * 
- * @package TimeYears Theme 
+ *
+ * @package TypechoTimeYears Theme 
  * @author hamusita
  * @version 1.0.0
  * @link http://timeyears.cn
