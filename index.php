@@ -1,3 +1,4 @@
+<?php
 /**
  * 小哈的第一个typecho主题
  *
@@ -7,8 +8,10 @@
  * @link http://timeyears.cn
  */
 
-//引入head
-<?php $this->header(); ?>
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+ $this->need('header.php');//引入<head>
+ ?>
+
 //站点名称和描述
 <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
 <span><?php $this->options->description() ?></span>
