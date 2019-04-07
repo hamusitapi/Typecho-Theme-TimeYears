@@ -2,16 +2,17 @@
 <!DOCTYPE HTML>
 <html lang="zh-cn">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
 <!-- 调用 -->
-<link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.css'); ?>" />
-<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+<script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
 </head>
 <body class="mdui-loaded mdui-theme-accent-deep-purple mdui-color-white">
-<div class="mdui-container">
-<header class="mdui-center mdui-hoverable mdui-shadow-8 mdui-ripple " >
+<div class="mdui-typo mdui-container">
+<header class="mdui-center mdui-shadow-8  " >
 	<!-- 站点名称及描述 -->
 	<h1 class="mdui-p-a-2"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
 	<p class="mdui-p-a-2"><?php $this->options->description() ?></p>
@@ -41,3 +42,4 @@
 		</form>
 	</div>
 </header>
+
