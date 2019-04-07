@@ -1,21 +1,18 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-$this->need('head.php'); 
 $this->need('header.php');
  ?>
 
-<!-- main -->
-<div class="post-main">
-  <div class="post-title">
-    <div class="mdui-typo-display-1"><?php $this->title() ?></div>
-    <div class="post-wenz">
-    <div class="mdui-typo-subheading">
-      <p><?php $this -> content(); ?></p>
-    </div>
-    </div>
+<!-- post main -->
+<div class="mdui-center">
+  <div class="mdui-m-a-1 mdui-p-a-1 mdui-hoverable">
+    <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+  </div>
+  <div class="mdui-m-a-1 mdui-p-a-1 mdui-hoverable">
+    <?php $this -> content(); ?>
   </div>
 </div>
-<!-- end main -->
+<!-- end post main -->
 
 <?php $this->need('comments.php'); ?>
 <?php $this->need('footer.php'); ?>

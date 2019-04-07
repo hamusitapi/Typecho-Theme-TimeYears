@@ -9,16 +9,10 @@
 <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
 <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
 </head>
-<header class="mdui-container">
+<body class="mdui-loaded mdui-theme-accent-deep-purple mdui-color-white">
+<div class="mdui-container">
+<header class="mdui-center">
 	<!-- sitename & description -->
-	<h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
-	<span><?php $this->options->description() ?></span>
-	<!-- searcher -->
-	<div>
-	<form method="post" action="">
-		<div class="mdui-row"><input class="mdui-col-xs-9 mdui-col-xs-9" type="text" class="mdui-textfield-input" placeholder="找点什么？" name="s" class="text" size="32" /> 
-		<input type="submit" class="mdui-col-xs-3 mdui-btn mdui-btn-raised mdui-ripple" class="submit" value="Search" /></div>
-	</form>
-	</div>
+	<h1 class="mdui-hoverable mdui-ripple mdui-p-y-2"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
+	<p><?php $this->options->description() ?></p>
 </header>
-<body>
