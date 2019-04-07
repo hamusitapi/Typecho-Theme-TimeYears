@@ -4,4 +4,4 @@
 - 学业问题初版完成预期时间3个月  
 
 学有所成，敬请期待！  
-&copy; timeyears.cn 2019
+timeyears.cn &copy; 2019
