@@ -4,12 +4,12 @@
  *
  * @package TypechoTimeYears Theme 
  * @author hamusita
- * @version 1.0.0
+ * @version 1.0.1
  * @link http://timeyears.cn
  */
 ?>
 <?php $this->need('header.php');//引入页头?>
-<section class="mdui-center mdui-hoverable mdui-shadow-8 ">
+<section id="content" class="mdui-center mdui-hoverable mdui-shadow-8 ">
 	
 	<!-- 文章输出 -->
 	<?php $index=0;  ?>
