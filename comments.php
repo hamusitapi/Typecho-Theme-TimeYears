@@ -8,6 +8,8 @@
       <!--评论分页-->
   <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
   <?php endif; ?>
+
+  <!--  -->
   <!-- 判断设置是否允许对当前文章进行评论 -->
   <?php if($this->allow('comment')): ?>
 
