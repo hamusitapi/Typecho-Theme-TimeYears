@@ -1,5 +1,27 @@
-@media screen and (min-width: 760px){
+@media screen and (min-width: 1020px){
     header,section,footer{
-        width: 760px!important;
+        width: 970px!important;
     }
 }
+@media screen and (min-width: 1220px){
+    header,section,footer{
+        width: 1170px!important;
+    }
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+width:8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+-webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+border-radius:6px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+border-radius:8px;
+background:rgba(0,0,0,0.1);
+-webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background:rgba(255,0,0,0.4);
