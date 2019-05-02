@@ -1,11 +1,28 @@
-@media screen and (min-width: 1020px){
+@media screen and (max-width: 790px){
     header,section,footer{
-        width: 970px!important;
+        border: 1px solid rgb(152, 152, 152);
+        background-color:rgba(255, 255, 255, 0.83);
     }
 }
-@media screen and (min-width: 1220px){
+@media screen and (min-width: 790px){
+    header,section,footer{
+        width: 770px!important;
+        border: 1px solid rgb(152, 152, 152);
+        background-color:rgba(255, 255, 255, 0.83);
+    }   
+}
+@media screen and (min-width: 990px){
+    header,section,footer{
+        width: 970px!important;
+        border: 1px solid rgb(152, 152, 152);
+        background-color:rgba(255, 255, 255, 0.83);
+    }
+}
+@media screen and (min-width: 1190px){
     header,section,footer{
         width: 1170px!important;
+        border: 1px solid rgb(152, 152, 152);
+        background-color:rgba(255, 255, 255, 0.83);
     }
 }
 /* 设置滚动条的样式 */

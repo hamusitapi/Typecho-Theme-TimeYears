@@ -2,7 +2,7 @@
   <?php $this->comments()->to($comments); ?>
   <?php if ($comments->have()): ?><!--如果有评论的才会输出-->
      <!--显示评论总条数-->
-  <h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
+  <h3 class="mdui-p-a-2"><a href=""><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a></h3>
       <!--输出评论列表-->
   <?php $comments->listComments(); ?>
       <!--评论分页-->
