@@ -1,3 +1,21 @@
+<?php function threadedComments($comments, $options) {
+    $commentClass = '';
+    if ($comments->authorId) {
+        if ($comments->authorId == $comments->ownerId) {
+            $commentClass .= ' comment-by-author';  //如果是文章作者的评论添加 .comment-by-author 样式
+        } else {
+            $commentClass .= ' comment-by-user';  //如果是评论作者的添加 .comment-by-user 样式
+        }
+    } 
+    $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
+?>
+ 
+
+ 
+<?php } ?>
+ 
+
+
 <section id="content" class="mdui-center mdui-m-y-3">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?><!--如果有评论的才会输出-->
@@ -5,22 +23,41 @@
     <h3 class="mdui-p-a-2"><a href=""><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a></h3><hr>
     <!--输出评论列表-->
     <ul id="comment_list" class="mdui-p-a-0"style="list-style:none">
+    
         <?php while($comments->next()): ?>
-            <li class="mdui-m-a-1 " id="<?php $comments->theId(); ?>" style="border: 1px solid rgb(152, 152, 152);">
-                <span class="mdui-float-right mdui-m-a-1"><?php echo $comments->sequence(); ?>楼</span><br>
-                <div class="">
-                    <div class="o comments-gravatar" style="" onclick="window.open('<?php $comments->permalink(); ?>');"><?php $comments->gravatar(40);?></div>
-                    <span class="mdui-m-x-1" class=""><?php $comments->author(); ?></span>
-                    <?php $comments->dateWord(); ?>
-                </div>
-                <div class="mdui-typo mdui-m-a-1">
-                    <?php $comments->content(); ?>
-                </div>  
-            </li> 
-        <?php endwhile; ?>
+            <li class="mdui-m-a-1 <?php 
+                if ($comments->_levels > 0) {
+                    echo ' comment-child';
+                    $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
+            } else {
+                    echo ' comment-parent';}
+                    $comments->alt(' comment-odd', ' comment-even');
+                     ?>" id="<?php $comments->theId(); ?>" style="border: 1px solid rgb(152, 152, 152);">
+            <span class="mdui-float-right mdui-m-a-1"><?php echo $comments->sequence(); ?>楼</span><br>
+            <div class="">
+                <div class="o comments-gravatar" style="" onclick="window.open('<?php $comments->permalink(); ?>');"><?php $comments->gravatar(40);?></div>
+                <span class="mdui-m-x-1" class=""><?php $comments->author(); ?></span>
+                <?php $comments->dateWord(); ?>
+            </div>
+            <div class="mdui-typo mdui-m-a-1">
+                <?php $comments->content(); ?>
+            </div>  
+                <li>
+                <?php if ($comments->children) { ?> 
+                    <div class="comment-children">
+                        <?php $comments->threadedComments($options); ?> 
+                    </div>
+                        <?php } ?> 
+                </li>
+            </li>
+    <?php endwhile; ?>
     </ul>
-    <?php endif; ?>
 
+
+
+
+
+    
     <!-- 判断设置是否允许对当前文章进行评论 -->
     <?php if($this->allow('comment')): ?>
         <h4 id="response">来一发？</h4>

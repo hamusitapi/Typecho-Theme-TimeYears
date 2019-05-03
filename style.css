@@ -25,6 +25,43 @@
         background-color:rgba(255, 255, 255, 0.83);
     }
 }
+.o{
+    transition: 1.2s;
+    width:40px; 
+    height:40px;
+    border: 1px solid rgb(152, 152, 152); 
+    border-radius:50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.o:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+.comments-gravatar{
+    position: relative;
+    top: -15px;
+    left: 10px;
+}
+#logo{
+    transition: 1.2s;
+    width:100px; 
+    height:100px;
+    border: 1px solid rgb(152, 152, 152); 
+    border-radius:50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+#logo:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
 width:8px;

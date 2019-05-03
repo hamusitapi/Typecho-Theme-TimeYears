@@ -12,24 +12,17 @@
 </head>
 <body class="mdui-loaded mdui-theme-accent-deep-purple mdui-color-white">
 <div class="mdui-typo mdui-container">
-<header class="mdui-center mdui-shadow-8" >
-	<!-- 站点名称及描述 -->
-	<h1 class="mdui-p-a-2"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></h1>
-	<p class="mdui-p-l-2"><?php $this->options->description() ?></p>
-	<!-- 面包屑 -->
-	<div class="mdui-p-l-2">
-		<div class="crumbs_patch">
-			<a href="<?php $this->options->siteUrl(); ?>">Home</a> &raquo;</li>
-			<?php if ($this->is('index')): ?><!-- 页面为首页时 -->
-				你好!
-			<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
-				<?php $this->category(); ?> &raquo; <?php $this->title() ?>
-			<?php else: ?><!-- 页面为其他页时 -->
-				<?php $this->archiveTitle(' &raquo; ','',''); ?>
-			<?php endif; ?>
+<header class="mdui-center mdui-valign mdui-row mdui-m-y-3">
+	<div class="mdui-center mdui-m-y-2">
+		<div id="logo" class="mdui-center" ><?php echo $this->author->gravatar(100);?></div>
+		<h1 class="mdui-m-y-1" style="width:100%;text-align:center;"><a href="<?php $this->options->siteUrl(); ?>" title="首页"><?php $this->options->title() ?></a></h1>
+		<span class=""><?php $this->options->description() ?></span>
 	</div>
+	
+	<!-- 面包屑 -->
+	
 	<!-- 搜索框 -->
-	<div class="mdui-p-a-2">
+	<!-- <div class="mdui-p-a-2">
 		<form method="post" action="">
 			<div class="mdui-row">
 				<div class="mdui-col-xs-8">
@@ -40,6 +33,7 @@
 				</div>
 			</div>
 		</form>
-	</div>
+	</div> -->
 </header>
+
 

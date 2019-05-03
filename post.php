@@ -4,7 +4,7 @@ $this->need('header.php');
  ?>
 
 <!-- post main -->
-<section id="content" class="mdui-center mdui-shadow-8">
+<section id="content" class="mdui-center mdui-m-y-3">
   <div class="mdui-m-a-1 mdui-p-a-1">
     <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
   </div>
@@ -18,5 +18,5 @@ $this->need('header.php');
         <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
     </ul> -->
 
-<?php $this->need('comments.php'); ?>
+<?php include('comments.php'); ?>
 <?php $this->need('footer.php'); ?>
