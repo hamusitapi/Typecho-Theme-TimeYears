@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.css'); ?>" />
 <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
 <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+<!-- <script src="https://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script> -->
 </head>
 <body class="mdui-loaded mdui-theme-accent-deep-purple mdui-color-white">
 <div class="mdui-typo mdui-container">

@@ -21,7 +21,7 @@
 		<span><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?>-</a></span>
 		<span><?php $this->date(); ?>-</span>
 		<span><?php $this->category(','); ?>-</span>
-		<span><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '评论 1', '评论 %d'); ?></a></span>
+		<span><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('0评论', '1评论', '%d评论'); ?></a></span>
 		<span><?php $this->tags(','); ?>
 		<div class="mdui-text-truncate" style="width=0px;"><?php $this -> excerpt(200); ?>
 		<a class="mdui-float-right mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="<?php $this->permalink() ?>">详情</a></div>

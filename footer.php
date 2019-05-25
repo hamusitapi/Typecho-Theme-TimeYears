@@ -4,5 +4,6 @@
     <div class="mdui-p-a-1">Power by <a href="//typecho.org" target="_blank">Typecho</a></div>
 </footer>
 </div>
+<script src="<?php $this->options->themeUrl('used.js'); ?>"></script>
 </body>
 </html>
