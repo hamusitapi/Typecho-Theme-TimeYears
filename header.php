@@ -11,7 +11,7 @@
 <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
 <!-- <script src="https://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script> -->
 </head>
-<body class="mdui-loaded mdui-theme-accent-deep-purple mdui-color-white">
+<body class="mdui-loaded mdui-theme-accent-indigo mdui-color-white">
 <div class="mdui-typo mdui-container">
 <header class="mdui-center mdui-valign mdui-row mdui-m-y-3">
 	<div class="mdui-center mdui-m-y-2">
