@@ -38,11 +38,11 @@
         <?php else: ?>
         <!-- 要求输入名字、邮箱、网址 -->
         <div class="mdui-m-x-2 mdui-textfield mdui-textfield-floating-label">
-            <label class="mdui-textfield-label">昵称</label>
+            <label class="mdui-textfield-label">昵称*</label>
             <input class="mdui-textfield-input" type="text" name="author" value="<?php $this->remember('author'); ?>"/>
         </div>    
         <div class="mdui-m-x-2 mdui-textfield mdui-textfield-floating-label">
-            <label class="mdui-textfield-label">邮箱</label>
+            <label class="mdui-textfield-label">邮箱*</label>
             <input class="mdui-textfield-input" type="text" name="mail" value="<?php $this->remember('mail'); ?>"/>
         </div>  
         <div class="mdui-m-x-2 mdui-textfield mdui-textfield-floating-label">
@@ -52,7 +52,7 @@
         <?php endif; ?>
         <!-- 输入要回复的内容 -->
         <div class="mdui-m-x-2 mdui-textfield mdui-textfield-floating-label">
-            <label class="mdui-textfield-label">Message</label>
+            <label class="mdui-textfield-label">Message*</label>
             <textarea class="mdui-textfield-input" name="text" rows="4"><?php $this->remember('text'); ?></textarea>
         </div>
             <input class="mdui-m-a-2 mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" type="submit" value="发送" />
