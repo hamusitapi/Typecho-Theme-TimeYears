@@ -13,10 +13,15 @@
 </head>
 <body class="mdui-loaded mdui-theme-accent-indigo mdui-color-white">
 <header>
-<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-  <input class="mdui-textfield-input" type="text" placeholder="Search"/>
-  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+<div class="crumbs_patch">
+	<a href="<?php $this->options->siteUrl(); ?>">Home</a> &raquo;</li>
+	<?php if ($this->is('index')): ?><!-- 页面为首页时 -->
+		Latest Post
+	<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+		<?php $this->category(); ?> &raquo; <?php $this->title() ?>
+	<?php else: ?><!-- 页面为其他页时 -->
+		<?php $this->archiveTitle(' &raquo; ','',''); ?>
+	<?php endif; ?>
 </div>
 
 </header>
@@ -31,13 +36,5 @@
 
 
 	<!-- 面包屑 -->
-<!-- <form method="post" action="">
-		<div class="mdui-textfield-expandable">
-			<button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			<input type="text" class="mdui-textfield-input mdui-ripple" placeholder="找点什么？" name="s" class="text" size="32" /> 
-			<input type="submit" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" class="submit" value="Search" />
-			<button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
-		</div>
-	</form> -->
 	<!-- 搜索框 -->
 	
