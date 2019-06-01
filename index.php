@@ -9,7 +9,7 @@
  */
 ?>
 <?php $this->need('header.php');//引入页头?>
-<section id="content" class="mdui-center mdui-m-y-3">
+<section id="content" class="mdui-center mdui-m-y-1">
 	
 	<!-- 文章输出 -->
 	<?php $index=0;  ?>

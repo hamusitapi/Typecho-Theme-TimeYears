@@ -1,4 +1,4 @@
-<section id="comments" class="mdui-center mdui-m-y-3">
+<section id="comments" class="mdui-center mdui-m-y-1">
     <?php $this->comments()->to($comments); ?>
      <!--显示评论总条数-->
      <h3 class="mdui-p-a-2"><a><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a></h3>
@@ -7,7 +7,7 @@
     <hr>
     <ul id="comment_list" class="mdui-p-a-0"style="list-style:none">
         <?php while($comments->next()): ?>
-            <li class="mdui-m-a-1" id="<?php $comments->theId(); ?>" style="border: 1px solid rgb(152, 152, 152);">
+            <li class="mdui-m-a-1" id="<?php $comments->theId(); ?>" style="border: 1px solid rgb(204, 204, 204)">
                 <span class="mdui-float-right mdui-m-a-1"><?php echo $comments->sequence(); ?>楼</span><br>
                 <div class="">
                     <div class="o comments-gravatar"><?php $comments->gravatar(40);?></div>
@@ -24,7 +24,7 @@
 </section>
     <!-- 判断设置是否允许对当前文章进行评论 -->
     <?php if($this->allow('comment')): ?>
-    <section id="content" class="mdui-center mdui-m-y-3">
+    <section id="content" class="mdui-center mdui-m-y-1">
         <h3 class="mdui-p-a-2"><a>来一发？</a></h3><hr>
         <!-- 输入表单开始 -->
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment_form">

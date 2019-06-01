@@ -4,7 +4,7 @@ $this->need('header.php');
  ?>
 
 <!-- post main -->
-<section id="content" class="mdui-center mdui-m-y-3">
+<section id="content" class="mdui-center mdui-m-y-1">
   <div class="mdui-m-a-1 mdui-p-a-1">
     <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
   </div>
