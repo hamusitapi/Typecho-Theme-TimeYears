@@ -12,18 +12,8 @@
 <script src="https://apps.bdimg.com/libs/jquery/2.1.2/jquery.js"></script>
 </head>
 <body class="mdui-loaded mdui-theme-accent-indigo mdui-color-white">
-<header>
-<div class="crumbs_patch">
-	<a href="<?php $this->options->siteUrl(); ?>">Home</a> &raquo;</li>
-	<?php if ($this->is('index')): ?><!-- 页面为首页时 -->
-		Latest Post
-	<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
-		<?php $this->category(); ?> &raquo; <?php $this->title() ?>
-	<?php else: ?><!-- 页面为其他页时 -->
-		<?php $this->archiveTitle(' &raquo; ','',''); ?>
-	<?php endif; ?>
-</div>
-
+<header class="mdui-center mdui-typo mdui-valign">
+	
 </header>
 <main class="mdui-typo">
 <section class="mdui-center mdui-valign mdui-row " style="margin-top: 90px;">
@@ -33,7 +23,18 @@
 			<span class=""><?php $this->options->description() ?></span>
 		</div>
 </section>
-
+<section class="mdui-center mdui-valign mdui-m-t-3">
+	<div class="mdui-p-a-1">
+		<a href="<?php $this->options->siteUrl(); ?>" style="display:inline">首页</a>&raquo;
+		<?php if ($this->is('index')): ?><!-- 页面为首页时 -->
+			最新文章
+		<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+			<?php $this->category(); ?> &raquo; <?php $this->title() ?>
+		<?php else: ?><!-- 页面为其他页时 -->
+			<?php $this->archiveTitle(' &raquo; ','',''); ?>
+		<?php endif; ?>
+	</div>
+</section>
 
 	<!-- 面包屑 -->
 	<!-- 搜索框 -->
